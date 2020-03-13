@@ -10,3 +10,5 @@
 
 * Edit Variables, ProjectID and OrgID ![Edit variables](images/EditVariables.png)
 
+* Run requests from Postman, Export to Code and Have fun. You are welcome to add any missing endpoints and other Atlas APi examples. 
+
