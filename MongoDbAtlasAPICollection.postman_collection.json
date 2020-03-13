@@ -1,0 +1,1400 @@
+{
+	"info": {
+		"_postman_id": "ba578c64-8aea-42e0-9178-916dd09b3b89",
+		"name": "MongoDbAtlasAPICollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Metrics",
+			"item": [
+				{
+					"name": "Get All Processes of the specified group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"processes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Info on Specified Process in The Specified Group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"processes",
+								"cluster0-shard-00-00-g5lrz.mongodb.net:27017"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Of Databases For Specified Host",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017/databases",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"processes",
+								"cluster0-shard-00-00-g5lrz.mongodb.net:27017",
+								"databases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Of Disks For Specified Host",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017/disks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"processes",
+								"cluster0-shard-00-00-g5lrz.mongodb.net:27017",
+								"disks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Measurements on Specified Disk For The Specified Host",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017/disks/data/measurements?granularity=PT5M&period=PT5M",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"processes",
+								"cluster0-shard-00-00-g5lrz.mongodb.net:27017",
+								"disks",
+								"data",
+								"measurements"
+							],
+							"query": [
+								{
+									"key": "granularity",
+									"value": "PT5M"
+								},
+								{
+									"key": "period",
+									"value": "PT5M"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Measurements For A Specified Host",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017/measurements?granularity=PT5M&period=PT5M",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"processes",
+								"cluster0-shard-00-00-g5lrz.mongodb.net:27017",
+								"measurements"
+							],
+							"query": [
+								{
+									"key": "granularity",
+									"value": "PT5M"
+								},
+								{
+									"key": "period",
+									"value": "PT5M"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Clusters",
+			"item": [
+				{
+					"name": "Get All Clusters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935/clusters",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"groups",
+								"5e1486c6a6f2392f35072935",
+								"clusters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Cluster",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935/clusters/Cluster0",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"groups",
+								"5e1486c6a6f2392f35072935",
+								"clusters",
+								"Cluster0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Cluster",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1e16a29ccf64eaaa7d6dea/clusters/Cluster0",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"groups",
+								"5e1e16a29ccf64eaaa7d6dea",
+								"clusters",
+								"Cluster0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Advance Configuration Options for a  Cluster",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935/clusters/Cluster0/processArgs",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"groups",
+								"5e1486c6a6f2392f35072935",
+								"clusters",
+								"Cluster0",
+								"processArgs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create One Cluster",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"SingleRegionCluster\",\n    \"diskSizeGB\": 100,\n    \"numShards\": 1,\n    \"providerSettings\": {\n        \"providerName\": \"AWS\",\n        \"diskIOPS\": 300,\n        \"instanceSizeName\": \"M40\",\n        \"regionName\": \"US_EAST_1\"\n    },\n    \"clusterType\": \"REPLICASET\",\n    \"replicationFactor\": 3,\n    \"replicationSpecs\": [\n        {\n            \"numShards\": 1,\n            \"regionsConfig\": {\n                \"US_EAST_1\": {\n                    \"analyticsNodes\": 0,\n                    \"electableNodes\": 3,\n                    \"priority\": 7,\n                    \"readOnlyNodes\": 0\n                }\n            },\n            \"zoneName\": \"Zone 1\"\n        }\n    ],\n    \"backupEnabled\": true,\n    \"autoScaling\": {\n        \"diskGBEnabled\": true\n    }\n}"
+						},
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935/clusters",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"groups",
+								"5e1486c6a6f2392f35072935",
+								"clusters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit One Cluster",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"paused\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/5e1486c6a6f2392f35072935/clusters/Cluster0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"5e1486c6a6f2392f35072935",
+								"clusters",
+								"Cluster0"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Get All Projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"groups",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Project by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"groups",
+								"5e1486c6a6f2392f35072935"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"5e1486c6c56c986919d2680d\"\n}"
+						},
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"groups",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Organizations",
+			"item": [
+				{
+					"name": "Get One Organization",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"\"\n}"
+						},
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/5e1486c6c56c986919d2680d",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"orgs",
+								"5e1486c6c56c986919d2680d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rename an Organization",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"MyAtlasCluster\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/5e1486c6c56c986919d2680d",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"orgs",
+								"5e1486c6c56c986919d2680d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an Organization",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/5e1486c6c56c986919d2680d",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"orgs",
+								"5e1486c6c56c986919d2680d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Organization Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"\"\n}"
+						},
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/5e1486c6c56c986919d2680d/users",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"orgs",
+								"5e1486c6c56c986919d2680d",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Organization Projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"\"\n}"
+						},
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/{{org_id_TestCo}}/groups",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"orgs",
+								"{{org_id_TestCo}}",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Organizations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs",
+							"protocol": "https",
+							"host": [
+								"cloud",
+								"mongodb",
+								"com"
+							],
+							"path": [
+								"api",
+								"atlas",
+								"v1.0",
+								"orgs"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Database Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/databaseUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"databaseUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Database User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"databaseName\": \"admin\",\n    \"password\": \"Password1\",\n    \"roles\": [\n        {\n            \"databaseName\": \"data\",\n            \"roleName\": \"readWrite\"\n        }\n    ],\n    \"username\": \"NewUser\",\n    \"labels\": [],\n    \"ldapAuthType\": \"NONE\",\n    \"x509Type\": \"NONE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/databaseUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"databaseUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/databaseUsers/admin/User1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"databaseUsers",
+								"admin",
+								"User1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Single User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"Password1\",\n    \"roles\": [\n        {\n            \"databaseName\": \"data\",\n            \"roleName\": \"readWrite\"\n        }\n    ],\n    \"labels\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/databaseUsers/admin/User1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"databaseUsers",
+								"admin",
+								"User1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Single User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/databaseUsers/admin/{Username}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"databaseUsers",
+								"admin",
+								"{Username}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Custom Roles",
+			"item": [
+				{
+					"name": "Get All Custom Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/customDBRoles/roles/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"customDBRoles",
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Custom Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"actions\": [\n        {\n            \"action\": \"CONN_POOL_STATS\",\n            \"resources\": [\n                {\n                    \"cluster\": true\n                }\n            ]\n        },\n        {\n            \"action\": \"COLL_STATS\",\n            \"resources\": [\n                {\n                    \"collection\": \"\",\n                    \"db\": \"staging\"\n                }\n            ]\n        }\n    ],\n    \"inheritedRoles\": [\n        {\n            \"db\": \"admin\",\n            \"role\": \"enableSharding\"\n        },\n        {\n            \"db\": \"admin\",\n            \"role\": \"backup\"\n        }\n    ],\n    \"roleName\": \"Role1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/customDBRoles/roles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"customDBRoles",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Custom Role",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/customDBRoles/roles/hfhgf",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"customDBRoles",
+								"roles",
+								"hfhgf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Custom Role",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"actions\" : [ {\r\n     \"action\" : \"COLL_MOD\",\r\n     \"resources\" : [ {\r\n       \"collection\" : \"\",\r\n       \"db\" : \"staging\"\r\n     } ]\r\n   }, {\r\n     \"action\" : \"COLL_STATS\",\r\n     \"resources\" : [ {\r\n       \"collection\" : \"\",\r\n       \"db\" : \"staging\"\r\n     } ]\r\n   } ],\r\n   \"inheritedRoles\" : [ {\r\n     \"db\" : \"admin\",\r\n     \"role\" : \"enableSharding\"\r\n   }, {\r\n     \"db\" : \"admin\",\r\n     \"role\" : \"backup\"\r\n   } ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/customDBRoles/roles/Role1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"customDBRoles",
+								"roles",
+								"Role1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Custom Role",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/customDBRoles/roles/Role1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"customDBRoles",
+								"roles",
+								"Role1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Project IP Whitelist",
+			"item": [
+				{
+					"name": "Get All IP Whitelist Entries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"whitelist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Entry to Project IP Whitelist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"ipAddress\": \"192.0.2.15\",\n        \"comment\": \"IP address for Application Server A\"\n    },\n    {\n        \"cidrBlock\": \"203.0.113.0/24\",\n        \"comment\": \"CIDR block for Application Server B - D\"\n    },\n    {\n        \"awsSecurityGroup\": \"sg-0026348ec11780bd1\",\n        \"comment\": \"Whitelisted AWS Security Group\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"whitelist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an entry from Project IP Whitelist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist/0.0.0.0%2F0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"whitelist",
+								"0.0.0.0%2F0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Entry in Project IP Whitelist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"ipAddress\": \"192.0.2.15\",\n        \"comment\": \"IP address for Application Server B\"\n    },\n    {\n        \"cidrBlock\": \"203.0.113.0/24\",\n        \"comment\": \"CIDR block for Application Server B - D\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"whitelist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an Entey from Project IP Whitelist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist/192.0.2.15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"whitelist",
+								"192.0.2.15"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Get All Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/teams",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Network Peering",
+			"item": [
+				{
+					"name": "Get Details on All Network Peering Containers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/containers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"containers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create One New Network Peering Container",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/containers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"containers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Alerts",
+			"item": [
+				{
+					"name": "Get All Alerts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alerts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"alerts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get An Alert",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alerts/533cb4b8e4b0f1820cdabc7f",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"alerts",
+								"533cb4b8e4b0f1820cdabc7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acknowledge an Alert",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"acknowledgedUntil\" : \"2016-10-01T00:00:00-0400\",\r\n  \"acknowledgementComment\" : \"Some Comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alerts/533cb4b8e4b0f1820cdabc7f",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"alerts",
+								"533cb4b8e4b0f1820cdabc7f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Alert Configurations",
+			"item": [
+				{
+					"name": "Get All Alerts Configurations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alertConfigs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"alertConfigs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Details Of A Specific Alert Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alertConfigs/5e1486c6a6f2392f35072936",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"alertConfigs",
+								"5e1486c6a6f2392f35072936"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Details Of A Specific Alert Config Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"eventTypeName\": \"USER_ROLES_CHANGED_AUDIT\",\n    \"enabled\": true,\n    \"notifications\": [\n        {\n            \"typeName\": \"WEBHOOK\",\n            \"intervalMin\": 5,\n            \"delayMin\": 0,\n            \"smsEnabled\": false,\n            \"emailEnabled\": true\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alertConfigs/5e28d9ad014b76fb741576c7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"alertConfigs",
+								"5e28d9ad014b76fb741576c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create An Alert Configutation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"eventTypeName\": \"USER_ROLES_CHANGED_AUDIT\",\n    \"enabled\": true,\n    \"notifications\": [\n        {\n            \"typeName\": \"WEBHOOK\",\n            \"intervalMin\": 5,\n            \"delayMin\": 0,\n            \"smsEnabled\": false,\n            \"emailEnabled\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alertConfigs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"alertConfigs"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "digest",
+		"digest": [
+			{
+				"key": "password",
+				"value": "9cd4b27c-963c-4340-bde2-6dbf0356c3da4",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "SAMPLEUSER",
+				"type": "string"
+			},
+			{
+				"key": "algorithm",
+				"value": "MD5",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1b0a990d-cd1b-431d-8d05-ad7319c0e7ed",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "26491cd5-0d74-4c27-8d95-c91b2a958076",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "06909078-6382-447d-aad8-86e8779f2edc",
+			"key": "base_url",
+			"value": "https://cloud.mongodb.com/api/atlas/v1.0",
+			"type": "string"
+		},
+		{
+			"id": "f7451ebf-316c-49e8-93fe-76e96de9684e",
+			"key": "group_id_Project0",
+			"value": "5e1486c6a6f23434f35072935",
+			"type": "string"
+		},
+		{
+			"id": "acae7470-a090-4772-8429-ed523ceeb27f",
+			"key": "org_id_TestCo",
+			"value": "5e1486c6c44386919d2680d",
+			"type": "string"
+		},
+		{
+			"id": "12eed2da-6716-4a28-8211-cd11ff9b8c78",
+			"key": "12eed2da-6716-4a28-8211-cd11ff9b8c78",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	],
+	"protocolProfileBehavior": {}
+}
