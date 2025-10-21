@@ -31,6 +31,12 @@ This collection provides a complete set of API requests for the MongoDB Atlas Ad
 - **Alerts & Alert Configurations** - Monitoring and alerting
 - **Metrics** - Performance metrics and monitoring data
 - **Teams** - Team management
+- **Cloud Backups & Snapshots** - Backup and restore operations
+- **Events** - Project and organization event logs
+- **Private Endpoints** - Private endpoint configuration for AWS, Azure, and GCP
+- **Maintenance Windows** - Schedule and manage maintenance windows
+- **Serverless Instances** - Serverless instance management (Note: deprecated, migrating to Flex clusters)
+- **Atlas Search** - Full-text search index management
 
 ## What's New in v2
 
@@ -184,6 +190,37 @@ The collection is organized into the following folders:
 
 ### Teams
 - Get team information
+
+### Cloud Backups & Snapshots
+- Get all cloud backup snapshots / Get one snapshot
+- Take on-demand snapshots
+- Get all restore jobs / Create restore job
+- Get and update backup schedules
+
+### Events
+- Get project and organization events
+- Track activity feed and audit trail
+- Filter events by type and date
+
+### Private Endpoints
+- Manage private endpoints for AWS, Azure, and GCP
+- Create and configure private endpoint services
+- Secure database connections through private networks
+
+### Maintenance Windows
+- Get and update maintenance windows
+- Defer maintenance operations
+- Reset to default maintenance schedule
+
+### Serverless Instances
+- CRUD operations for serverless instances
+- Note: Serverless instances are deprecated (sunset January 2026)
+- Migration to Flex clusters recommended
+
+### Atlas Search
+- Manage full-text search indexes
+- Create and configure search mappings
+- Update and delete search indexes
 
 ## Usage Examples
 
