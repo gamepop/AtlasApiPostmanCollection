@@ -1501,6 +1501,968 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cloud Backups & Snapshots",
+			"item": [
+				{
+					"name": "Get All Cloud Backup Snapshots",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/backup/snapshots",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"backup",
+								"snapshots"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Cloud Backup Snapshot",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/backup/snapshots/{snapshotId}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"backup",
+								"snapshots",
+								"{snapshotId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Take One On-Demand Snapshot",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"On-demand snapshot\",\n  \"retentionInDays\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/backup/snapshots",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"backup",
+								"snapshots"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Restore Jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/backup/restoreJobs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"backup",
+								"restoreJobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create One Restore Job from Snapshot",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"deliveryType\": \"automated\",\n  \"targetClusterName\": \"targetCluster\",\n  \"targetGroupId\": \"{{group_id_Project0}}\",\n  \"snapshotId\": \"{snapshotId}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/backup/restoreJobs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"backup",
+								"restoreJobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Backup Schedule",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/backup/schedule",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"backup",
+								"schedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Backup Schedule",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"autoExportEnabled\": false,\n  \"referenceHourOfDay\": 12,\n  \"referenceMinuteOfHour\": 30,\n  \"restoreWindowDays\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/backup/schedule",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"backup",
+								"schedule"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Get All Project Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Project Event",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/events/{eventId}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"events",
+								"{eventId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Organization Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/orgs/{{org_id_TestCo}}/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"orgs",
+								"{{org_id_TestCo}}",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Organization Event",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/orgs/{{org_id_TestCo}}/events/{eventId}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"orgs",
+								"{{org_id_TestCo}}",
+								"events",
+								"{eventId}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Private Endpoints",
+			"item": [
+				{
+					"name": "Get All Private Endpoints for One Project",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/privateEndpoint/{cloudProvider}/endpointService",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"privateEndpoint",
+								"{cloudProvider}",
+								"endpointService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create One Private Endpoint Service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"providerName\": \"AWS\",\n  \"region\": \"us-east-1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/privateEndpoint/endpointService",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"privateEndpoint",
+								"endpointService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Private Endpoint Service",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/privateEndpoint/{cloudProvider}/endpointService/{endpointServiceId}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"privateEndpoint",
+								"{cloudProvider}",
+								"endpointService",
+								"{endpointServiceId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Private Endpoint Service",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/privateEndpoint/{cloudProvider}/endpointService/{endpointServiceId}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"privateEndpoint",
+								"{cloudProvider}",
+								"endpointService",
+								"{endpointServiceId}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Maintenance Windows",
+			"item": [
+				{
+					"name": "Get Maintenance Window",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/maintenanceWindow",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"maintenanceWindow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Maintenance Window",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dayOfWeek\": 1,\n  \"hourOfDay\": 2,\n  \"autoDeferOnceEnabled\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/maintenanceWindow",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"maintenanceWindow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Defer Maintenance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/maintenanceWindow/defer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"maintenanceWindow",
+								"defer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Maintenance Window to Default",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/maintenanceWindow",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"maintenanceWindow"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Serverless Instances",
+			"item": [
+				{
+					"name": "Get All Serverless Instances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/serverless",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"serverless"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Serverless Instance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/serverless/{instanceName}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"serverless",
+								"{instanceName}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create One Serverless Instance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"ServerlessInstance0\",\n  \"providerSettings\": {\n    \"backingProviderName\": \"AWS\",\n    \"providerName\": \"SERVERLESS\",\n    \"regionName\": \"US_EAST_1\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/serverless",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"serverless"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One Serverless Instance",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"serverlessBackupOptions\": {\n    \"serverlessContinuousBackupEnabled\": true\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/serverless/{instanceName}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"serverless",
+								"{instanceName}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Serverless Instance",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/serverless/{instanceName}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"serverless",
+								"{instanceName}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Atlas Search",
+			"item": [
+				{
+					"name": "Get All Atlas Search Indexes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/fts/indexes/{databaseName}/{collectionName}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"fts",
+								"indexes",
+								"{databaseName}",
+								"{collectionName}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Atlas Search Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/fts/indexes/{indexId}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"fts",
+								"indexes",
+								"{indexId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create One Atlas Search Index",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"default\",\n  \"database\": \"sample_mflix\",\n  \"collectionName\": \"movies\",\n  \"mappings\": {\n    \"dynamic\": true\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/fts/indexes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"fts",
+								"indexes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One Atlas Search Index",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mappings\": {\n    \"dynamic\": false,\n    \"fields\": {\n      \"title\": {\n        \"type\": \"string\"\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/fts/indexes/{indexId}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"fts",
+								"indexes",
+								"{indexId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Atlas Search Index",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/{clusterName}/fts/indexes/{indexId}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"groups",
+								"{{group_id_Project0}}",
+								"clusters",
+								"{clusterName}",
+								"fts",
+								"indexes",
+								"{indexId}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"auth": {
