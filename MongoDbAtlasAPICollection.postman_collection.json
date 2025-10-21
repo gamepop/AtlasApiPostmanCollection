@@ -12,7 +12,13 @@
 					"name": "Get All Processes of the specified group",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes",
 							"host": [
@@ -31,7 +37,13 @@
 					"name": "Get Info on Specified Process in The Specified Group",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017",
 							"host": [
@@ -51,7 +63,13 @@
 					"name": "Get List Of Databases For Specified Host",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017/databases",
 							"host": [
@@ -72,7 +90,13 @@
 					"name": "Get List Of Disks For Specified Host",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017/disks",
 							"host": [
@@ -93,7 +117,13 @@
 					"name": "Get Measurements on Specified Disk For The Specified Host",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017/disks/data/measurements?granularity=PT5M&period=PT5M",
 							"host": [
@@ -126,7 +156,13 @@
 					"name": "Get Measurements For A Specified Host",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/processes/cluster0-shard-00-00-g5lrz.mongodb.net:27017/measurements?granularity=PT5M&period=PT5M",
 							"host": [
@@ -163,21 +199,21 @@
 					"name": "Get All Clusters",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935/clusters",
-							"protocol": "https",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"groups",
-								"5e1486c6a6f2392f35072935",
+								"{{group_id_Project0}}",
 								"clusters"
 							]
 						}
@@ -188,21 +224,21 @@
 					"name": "Get One Cluster",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935/clusters/Cluster0",
-							"protocol": "https",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/Cluster0",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"groups",
-								"5e1486c6a6f2392f35072935",
+								"{{group_id_Project0}}",
 								"clusters",
 								"Cluster0"
 							]
@@ -214,21 +250,21 @@
 					"name": "Delete One Cluster",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1e16a29ccf64eaaa7d6dea/clusters/Cluster0",
-							"protocol": "https",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/Cluster0",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"groups",
-								"5e1e16a29ccf64eaaa7d6dea",
+								"{{group_id_Project0}}",
 								"clusters",
 								"Cluster0"
 							]
@@ -240,21 +276,21 @@
 					"name": "Get Advance Configuration Options for a  Cluster",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935/clusters/Cluster0/processArgs",
-							"protocol": "https",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/Cluster0/processArgs",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"groups",
-								"5e1486c6a6f2392f35072935",
+								"{{group_id_Project0}}",
 								"clusters",
 								"Cluster0",
 								"processArgs"
@@ -275,7 +311,7 @@
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -284,19 +320,13 @@
 							"raw": "{\n    \"name\": \"SingleRegionCluster\",\n    \"diskSizeGB\": 100,\n    \"numShards\": 1,\n    \"providerSettings\": {\n        \"providerName\": \"AWS\",\n        \"diskIOPS\": 300,\n        \"instanceSizeName\": \"M40\",\n        \"regionName\": \"US_EAST_1\"\n    },\n    \"clusterType\": \"REPLICASET\",\n    \"replicationFactor\": 3,\n    \"replicationSpecs\": [\n        {\n            \"numShards\": 1,\n            \"regionsConfig\": {\n                \"US_EAST_1\": {\n                    \"analyticsNodes\": 0,\n                    \"electableNodes\": 3,\n                    \"priority\": 7,\n                    \"readOnlyNodes\": 0\n                }\n            },\n            \"zoneName\": \"Zone 1\"\n        }\n    ],\n    \"backupEnabled\": true,\n    \"autoScaling\": {\n        \"diskGBEnabled\": true\n    }\n}"
 						},
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935/clusters",
-							"protocol": "https",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"groups",
-								"5e1486c6a6f2392f35072935",
+								"{{group_id_Project0}}",
 								"clusters"
 							]
 						}
@@ -313,6 +343,11 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -325,13 +360,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/groups/5e1486c6a6f2392f35072935/clusters/Cluster0",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/clusters/Cluster0",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"groups",
-								"5e1486c6a6f2392f35072935",
+								"{{group_id_Project0}}",
 								"clusters",
 								"Cluster0"
 							]
@@ -349,21 +384,20 @@
 					"name": "Get All Projects",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/",
-							"protocol": "https",
+							"raw": "{{base_url}}/groups",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
-								"groups",
-								""
+								"groups"
 							]
 						}
 					},
@@ -373,21 +407,21 @@
 					"name": "Get One Project by ID",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/5e1486c6a6f2392f35072935",
-							"protocol": "https",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"groups",
-								"5e1486c6a6f2392f35072935"
+								"{{group_id_Project0}}"
 							]
 						}
 					},
@@ -397,25 +431,29 @@
 					"name": "Create a Project",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"5e1486c6c56c986919d2680d\"\n}"
+							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"{{org_id_TestCo}}\"\n}"
 						},
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/groups/",
-							"protocol": "https",
+							"raw": "{{base_url}}/groups",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
-								"groups",
-								""
+								"groups"
 							]
 						}
 					},
@@ -434,25 +472,25 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"\"\n}"
 						},
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/5e1486c6c56c986919d2680d",
-							"protocol": "https",
+							"raw": "{{base_url}}/orgs/{{org_id_TestCo}}",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"orgs",
-								"5e1486c6c56c986919d2680d"
+								"{{org_id_TestCo}}"
 							]
 						}
 					},
@@ -468,6 +506,11 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -480,19 +523,13 @@
 							}
 						},
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/5e1486c6c56c986919d2680d",
-							"protocol": "https",
+							"raw": "{{base_url}}/orgs/{{org_id_TestCo}}",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"orgs",
-								"5e1486c6c56c986919d2680d"
+								"{{org_id_TestCo}}"
 							]
 						}
 					},
@@ -508,6 +545,11 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -520,19 +562,13 @@
 							}
 						},
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/5e1486c6c56c986919d2680d",
-							"protocol": "https",
+							"raw": "{{base_url}}/orgs/{{org_id_TestCo}}",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"orgs",
-								"5e1486c6c56c986919d2680d"
+								"{{org_id_TestCo}}"
 							]
 						}
 					},
@@ -545,25 +581,25 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"\"\n}"
 						},
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/5e1486c6c56c986919d2680d/users",
-							"protocol": "https",
+							"raw": "{{base_url}}/orgs/{{org_id_TestCo}}/users",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"orgs",
-								"5e1486c6c56c986919d2680d",
+								"{{org_id_TestCo}}",
 								"users"
 							]
 						}
@@ -577,23 +613,23 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"Project1\",\n\t\"orgId\": \"\"\n}"
 						},
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs/{{org_id_TestCo}}/groups",
-							"protocol": "https",
+							"raw": "{{base_url}}/orgs/{{org_id_TestCo}}/groups",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"orgs",
 								"{{org_id_TestCo}}",
 								"groups"
@@ -606,19 +642,19 @@
 					"name": "Get All Organizations",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://cloud.mongodb.com/api/atlas/v1.0/orgs",
-							"protocol": "https",
+							"raw": "{{base_url}}/orgs",
 							"host": [
-								"cloud",
-								"mongodb",
-								"com"
+								"{{base_url}}"
 							],
 							"path": [
-								"api",
-								"atlas",
-								"v1.0",
 								"orgs"
 							]
 						}
@@ -635,7 +671,13 @@
 					"name": "Get All Users",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/databaseUsers",
 							"host": [
@@ -659,6 +701,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -689,7 +736,13 @@
 					"name": "Get a Single User",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/databaseUsers/admin/User1",
 							"host": [
@@ -715,6 +768,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -747,7 +805,13 @@
 					"name": "Delete a Single User",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/databaseUsers/admin/{Username}",
 							"host": [
@@ -774,7 +838,13 @@
 					"name": "Get All Custom Roles",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/customDBRoles/roles/",
 							"host": [
@@ -800,6 +870,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -831,7 +906,13 @@
 					"name": "Get a Custom Role",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/customDBRoles/roles/hfhgf",
 							"host": [
@@ -857,6 +938,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -889,7 +975,13 @@
 					"name": "Delete a Custom Role",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/customDBRoles/roles/Role1",
 							"host": [
@@ -910,29 +1002,35 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "Project IP Whitelist",
+			"name": "Project IP Access List",
 			"item": [
 				{
-					"name": "Get All IP Whitelist Entries",
+					"name": "Get All IP Access List Entries",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/accessList",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"groups",
 								"{{group_id_Project0}}",
-								"whitelist"
+								"accessList"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Add Entry to Project IP Whitelist",
+					"name": "Add Entry to Project IP Access List",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -941,11 +1039,16 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"ipAddress\": \"192.0.2.15\",\n        \"comment\": \"IP address for Application Server A\"\n    },\n    {\n        \"cidrBlock\": \"203.0.113.0/24\",\n        \"comment\": \"CIDR block for Application Server B - D\"\n    },\n    {\n        \"awsSecurityGroup\": \"sg-0026348ec11780bd1\",\n        \"comment\": \"Whitelisted AWS Security Group\"\n    }\n]",
+							"raw": "[\n    {\n        \"ipAddress\": \"192.0.2.15\",\n        \"comment\": \"IP address for Application Server A\"\n    },\n    {\n        \"cidrBlock\": \"203.0.113.0/24\",\n        \"comment\": \"CIDR block for Application Server B - D\"\n    },\n    {\n        \"awsSecurityGroup\": \"sg-0026348ec11780bd1\",\n        \"comment\": \"AWS Security Group\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -953,33 +1056,39 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/accessList",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"groups",
 								"{{group_id_Project0}}",
-								"whitelist"
+								"accessList"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get an entry from Project IP Whitelist",
+					"name": "Get an entry from Project IP Access List",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist/0.0.0.0%2F0",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/accessList/0.0.0.0%2F0",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"groups",
 								"{{group_id_Project0}}",
-								"whitelist",
+								"accessList",
 								"0.0.0.0%2F0"
 							]
 						}
@@ -987,7 +1096,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Entry in Project IP Whitelist",
+					"name": "Update Entry in Project IP Access List",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -995,6 +1104,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -1008,33 +1122,39 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/accessList",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"groups",
 								"{{group_id_Project0}}",
-								"whitelist"
+								"accessList"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Delete an Entey from Project IP Whitelist",
+					"name": "Delete an Entry from Project IP Access List",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "{{base_url}}/groups/{{group_id_Project0}}/whitelist/192.0.2.15",
+							"raw": "{{base_url}}/groups/{{group_id_Project0}}/accessList/192.0.2.15",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"groups",
 								"{{group_id_Project0}}",
-								"whitelist",
+								"accessList",
 								"192.0.2.15"
 							]
 						}
@@ -1051,7 +1171,13 @@
 					"name": "Get All Teams",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/teams",
 							"host": [
@@ -1076,7 +1202,13 @@
 					"name": "Get Details on All Network Peering Containers",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/containers",
 							"host": [
@@ -1100,6 +1232,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -1136,7 +1273,13 @@
 					"name": "Get All Alerts",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alerts",
 							"host": [
@@ -1155,7 +1298,13 @@
 					"name": "Get An Alert",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alerts/533cb4b8e4b0f1820cdabc7f",
 							"host": [
@@ -1180,6 +1329,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -1217,7 +1371,13 @@
 					"name": "Get All Alerts Configurations",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alertConfigs",
 							"host": [
@@ -1236,7 +1396,13 @@
 					"name": "Get Details Of A Specific Alert Config",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/groups/{{group_id_Project0}}/alertConfigs/5e1486c6a6f2392f35072936",
 							"host": [
@@ -1261,6 +1427,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -1297,6 +1468,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.atlas.2023-02-01+json",
 								"type": "text"
 							}
 						],
@@ -1373,7 +1549,7 @@
 		{
 			"id": "06909078-6382-447d-aad8-86e8779f2edc",
 			"key": "base_url",
-			"value": "https://cloud.mongodb.com/api/atlas/v1.0",
+			"value": "https://cloud.mongodb.com/api/atlas/v2",
 			"type": "string"
 		},
 		{
